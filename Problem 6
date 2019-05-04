@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	int firstN = 0;
+	int secondN = 1;
+	
+		for (int i = 1; i <= 20; ++i)
+		{
+				cout << firstN << ",";
+				int sum = firstN + secondN;
+				firstN = secondN;
+				secondN = sum;
+		}
+		
+	return 0;	
+}
+
