@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+		
+	float totalbill, unpaidbill, gallons;
+	
+	cout << "How many gallons were consumed: ";
+	cin >> gallons;
+	
+	cout << "How much is the unpaid balance: ";
+	cin >> unpaidbill;
+	
+	totalbill = (35 + (1.10 * gallons));
+	
+	if (unpaidbill > 0)
+{
+	    cout << "Total Bill: " << (( totalbill + unpaidbill ) +20 );	
+	}
+
+	else
+	{
+		cout << "Total Bill: " << totalbill << endl;
+	}
+	
+	return 0;
+}
+ 
