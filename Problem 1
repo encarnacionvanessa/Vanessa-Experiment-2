@@ -1,0 +1,65 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+
+{
+	
+ char Package;
+ int PackageA, PackageB, PackageC, HoursUsed, TotalAmountDue;
+
+ PackageA = 995;
+ PackageB = 1495;
+ PackageC = 1995;
+
+ cout << "Choose between Package A, Package B or Package C" << endl;
+
+ cout << "Please enter your desired Subscription Package: "; 
+ cin >> Package;
+
+ cout << " Please enter how many hours were used: ";
+ cin >> HoursUsed;
+
+switch (Package)
+
+ {
+ 	case 'A':
+ 	cout << “ Duly Noted " << endl;
+ 	cout << " " << endl;
+
+
+ 		if (HoursUsed > 0 && HoursUsed <= 10)
+cout << "Total Monthly Due: Php " << PackageA;
+
+ 		else if (HoursUsed > 10)
+ 		cout << “Total Monthly Due: Php " << (((HoursUsed - 10) * 20) + 995) ;
+ 		break;	
+ 		
+ 	case 'B':
+ 	cout << "Thank you for choosing this package!" << endl;
+ 	cout << " " << endl;
+
+ 	    if (HoursUsed > 0 && HoursUsed <= 20)
+ 	    cout << "Total Monthly Due:  Php " << PackageB ;
+
+ 	    else if (HoursUsed > 20)
+ 	    cout << "Total Monthly Due: Php " << (((HoursUsed - 20) * 10 ) + 1495) ;
+ 		break;
+ 		
+ 	case 'C':
+ 	cout << "We are thankful for your excellent choice!" << endl;
+ 	cout << " " << endl;
+
+ 	    if (HoursUsed > 0 && HoursUsed > 20)
+ 	    cout << "Total Monthly Due: Php " << PackageC;
+ 		break;
+ 	cout << " " <<endl;
+	
+ 	default:
+ 		cout << "It is an invalid choice! Please choose again among these packages only: Package A, Package B or Package C!" << endl; 	
+ }
+
+    _getch();
+	return 0;
+} 
